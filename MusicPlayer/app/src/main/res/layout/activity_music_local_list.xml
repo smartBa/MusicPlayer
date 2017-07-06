@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="c.musicplayer.Activity.MusicLocalList">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fffff0"/>
+            <LinearLayout
+                android:weightSum="5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="1"
+                    android:id="@+id/backLocal"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+                <ImageView
+                    android:layout_weight="1"
+                    android:id="@+id/likeListLocal"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/list"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="你当前没有任何的歌曲"
+            android:id="@+id/noneMusic"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/musicLocalList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector"
+                android:clickable="true"
+                android:id="@+id/playAllLocal">
+                <View  android:layout_height="1px"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="39dp"
+                    android:background="#BFBFBF" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/play_all"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="播放全部"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="125dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/numMusic"/>
+            </RelativeLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listLocal"></ListView>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/playDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#fffff0"></ImageView>
+            <LinearLayout
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:id="@+id/showLocal"
+                    android:src="@drawable/music_show"
+                    android:scaleType="centerCrop" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/musicNameLocal"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:maxLines="1"
+                        android:text="一次就好" />
+                    <TextView
+                        android:id="@+id/musicAuthorLocal"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:maxLines="1"
+                        android:text="杨宗纬"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="5.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ProgressBar
+                        android:id="@+id/progressLocal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyleHorizontal"/>
+                    <LinearLayout
+                        android:weightSum="9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_weight="3"
+                            android:id="@+id/musicBackLocal"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/backgforward" />
+                        <ImageView
+                            android:layout_weight="3"
+                            android:id="@+id/musicPlayLocal"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/stop"/>
+                        <ImageView
+                            android:layout_weight="3"
+                            android:id="@+id/musicNextLocal"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/next"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

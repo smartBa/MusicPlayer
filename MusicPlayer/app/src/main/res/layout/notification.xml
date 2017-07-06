@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/pictureNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/music_show"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:weightSum="5"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/noName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:text="一次就好"/>
+            <TextView
+                android:id="@+id/noAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:text="杨宗纬"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/playNo"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:src="@drawable/show_play"/>
+        <ImageView
+            android:id="@+id/nextNo"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:src="@drawable/show_next"/>
+    </LinearLayout>
+
+</LinearLayout>
